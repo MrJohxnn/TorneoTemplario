@@ -155,7 +155,7 @@ public class Principal extends javax.swing.JFrame {
             }
         }
     }
-
+// asdf
     // Construir mensaje del podio
     String mensaje = "=== PODIO DEL TORNEO TEMPLARIO ===\n\n";
 
