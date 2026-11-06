@@ -122,64 +122,31 @@ public class Ronda extends javax.swing.JFrame {
     }
     
     private void registrarEstadisticas(String jugador1, String jugador2,
-        int puntos1, int puntos2) {
+                                  int puntos1, int puntos2) {
 
-        // Buscar los índices de ambos jugadores
         int indice1 = Jugadores.jugadores.indexOf(jugador1);
         int indice2 = Jugadores.jugadores.indexOf(jugador2);
 
-        double winRate1;
-        double winRate2;
-
-        // Registrar un enfrentamiento disputado por cada jugador
+        // Registrar enfrentamiento jugado
         Principal.partidasJugadas.set(indice1,
                 Principal.partidasJugadas.get(indice1) + 1);
 
         Principal.partidasJugadas.set(indice2,
                 Principal.partidasJugadas.get(indice2) + 1);
 
+        // Registrar victoria del enfrentamiento
         if (puntos1 > puntos2) {
 
-            // Ganó el jugador 1
             Principal.rondasGanadas.set(indice1,
                     Principal.rondasGanadas.get(indice1) + 1);
 
-            winRate1 = 100;
-
-            if (puntos2 == 1) {
-                winRate2 = 50;
-            } else {
-                winRate2 = 0;
-            }
-
         } else if (puntos2 > puntos1) {
 
-            // Ganó el jugador 2
             Principal.rondasGanadas.set(indice2,
                     Principal.rondasGanadas.get(indice2) + 1);
-
-            winRate2 = 100;
-
-            if (puntos1 == 1) {
-                winRate1 = 50;
-            } else {
-                winRate1 = 0;
-            }
-
-        } else {
-
-            // Empate: 25% para cada jugador
-            winRate1 = 25;
-            winRate2 = 25;
         }
 
-        // Acumular Win Rate del jugador 1
-        Principal.winRateAcumulado.set(indice1,
-                Principal.winRateAcumulado.get(indice1) + winRate1);
-
-        // Acumular Win Rate del jugador 2
-        Principal.winRateAcumulado.set(indice2,
-                Principal.winRateAcumulado.get(indice2) + winRate2);
+        // En caso de empate, nadie suma una victoria
     }
     
     private boolean validarResultado(int puntos1, int puntos2) {

@@ -91,11 +91,11 @@ public class Principal extends javax.swing.JFrame {
 
     for (int i = 0; i < Jugadores.jugadores.size(); i++) {
 
-        double winRate = 0;
+        double winRate = 0.0;
 
-        // Calcular Win Rate individual
         if (partidasJugadas.get(i) > 0) {
-            winRate = winRateAcumulado.get(i) / partidasJugadas.get(i);
+            winRate = (rondasGanadas.get(i) * 100.0)
+                    / partidasJugadas.get(i);
         }
 
         // Mostrar información del jugador
@@ -140,16 +140,16 @@ public class Principal extends javax.swing.JFrame {
             int indice1 = posiciones.get(i);
             int indice2 = posiciones.get(j);
 
-            double winRate1 = 0;
-            double winRate2 = 0;
+            double winRate1 = 0.0;
+            double winRate2 = 0.0;
 
             if (partidasJugadas.get(indice1) > 0) {
-                winRate1 = winRateAcumulado.get(indice1)
+                winRate1 = (rondasGanadas.get(indice1) * 100.0)
                         / partidasJugadas.get(indice1);
             }
 
             if (partidasJugadas.get(indice2) > 0) {
-                winRate2 = winRateAcumulado.get(indice2)
+                winRate2 = (rondasGanadas.get(indice2) * 100.0)
                         / partidasJugadas.get(indice2);
             }
 
@@ -164,7 +164,7 @@ public class Principal extends javax.swing.JFrame {
             }
         }
     }
-// asdf
+    
     // Construir mensaje del podio
     String mensaje = "=== PODIO DEL TORNEO TEMPLARIO ===\n\n";
 
@@ -174,10 +174,10 @@ public class Principal extends javax.swing.JFrame {
 
         int indice = posiciones.get(i);
 
-        double winRate = 0;
+        double winRate = 0.0;
 
         if (partidasJugadas.get(indice) > 0) {
-            winRate = winRateAcumulado.get(indice)
+            winRate = (rondasGanadas.get(indice) * 100.0)
                     / partidasJugadas.get(indice);
         }
 
