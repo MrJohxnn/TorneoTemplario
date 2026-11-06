@@ -100,7 +100,7 @@ public class Jugadores extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 280, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnSelectTodos)
@@ -111,11 +111,8 @@ public class Jugadores extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtBastian)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtPato)
-                                    .addComponent(txtDiego))
-                                .addGap(5, 5, 5)))
+                            .addComponent(txtPato)
+                            .addComponent(txtDiego))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtJohann)
@@ -162,12 +159,28 @@ public class Jugadores extends javax.swing.JFrame {
 
     private void btnSelectTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectTodosActionPerformed
         // TODO add your handling code here:
-        // Seleccionar todos los jugadores
-        txtPato.setSelected(true);
-        txtDiego.setSelected(true);
-        txtBastian.setSelected(true);
-        txtAlexis.setSelected(true);
-        txtJohann.setSelected(true);
+
+    // Comprobar si todos los jugadores están seleccionados
+    boolean todosSeleccionados =
+            txtPato.isSelected() &&
+            txtDiego.isSelected() &&
+            txtBastian.isSelected() &&
+            txtAlexis.isSelected() &&
+            txtJohann.isSelected();
+
+            // Cambiar el estado de todos los jugadores
+            txtPato.setSelected(!todosSeleccionados);
+            txtDiego.setSelected(!todosSeleccionados);
+            txtBastian.setSelected(!todosSeleccionados);
+            txtAlexis.setSelected(!todosSeleccionados);
+            txtJohann.setSelected(!todosSeleccionados);
+
+            // Actualizar el texto del botón
+            if (todosSeleccionados) {
+                btnSelectTodos.setText("Seleccionar todos");
+            } else {
+                btnSelectTodos.setText("Borrar");
+            }
     }//GEN-LAST:event_btnSelectTodosActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
