@@ -198,6 +198,7 @@ public class Jugadores extends javax.swing.JFrame {
 
         // Reiniciar el contador de rondas
         Principal.numeroRonda = 0;
+        Principal.ultimoResultado = "";
 
         // Limpiar puntajes y estadísticas anteriores
         Principal.puntajes.clear();

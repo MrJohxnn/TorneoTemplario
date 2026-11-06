@@ -21,7 +21,11 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         this.setSize(395, 380);
         this.setLocationRelativeTo(null);
-        mostrarJugadores();
+        if (numeroRonda == 0) {
+            mostrarJugadores();
+        } else {
+            mostrarUltimaRonda();
+        }
     }
     
     private void mostrarJugadores() {
@@ -101,6 +105,11 @@ public class Principal extends javax.swing.JFrame {
         txtDatos.append("Win Rate: " + String.format("%.2f", winRate) + "%\n");
         txtDatos.append("----------------------------\n\n");
         }
+    }
+    
+    private void mostrarUltimaRonda() {
+
+    txtDatos.setText(ultimoResultado);
     }
     
     private void finalizarTorneo() {
@@ -191,6 +200,7 @@ public class Principal extends javax.swing.JFrame {
     }
     
     public static int numeroRonda = 0;
+    public static String ultimoResultado = "";
     
     public static ArrayList<Integer> puntajes = new ArrayList<>();
     

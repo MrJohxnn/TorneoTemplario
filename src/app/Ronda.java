@@ -417,6 +417,23 @@ public class Ronda extends javax.swing.JFrame {
                 Principal.puntajes.set(indiceJuez,
                         Principal.puntajes.get(indiceJuez) + 1);
             }
+            
+            // Guardar los resultados de la última ronda
+            String resultado = "=== RESULTADOS RONDA "
+                    + (Principal.numeroRonda + 1) + " ===\n\n";
+
+            resultado += lblPlayer1.getText() + " "
+                    + puntos1 + " - " + puntos2 + " "
+                    + lblPlayer2.getText() + "\n";
+
+            if (segundoDuelo) {
+
+                resultado += lblPlayer3.getText() + " "
+                        + puntos3 + " - " + puntos4 + " "
+                        + lblPlayer4.getText() + "\n";
+            }
+
+            Principal.ultimoResultado = resultado;
 
             // Aumentar contador de rondas
             Principal.numeroRonda++;
