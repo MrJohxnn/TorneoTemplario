@@ -275,6 +275,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
+        btnNuevaRonda.setBackground(new java.awt.Color(0, 204, 0));
         btnNuevaRonda.setText("Nueva ronda");
         btnNuevaRonda.addActionListener(this::btnNuevaRondaActionPerformed);
 
@@ -284,6 +285,7 @@ public class Principal extends javax.swing.JFrame {
         btnEstadisticas.setText("Estadísticas");
         btnEstadisticas.addActionListener(this::btnEstadisticasActionPerformed);
 
+        btnFinalizar.setBackground(new java.awt.Color(204, 0, 0));
         btnFinalizar.setText("Finalizar");
         btnFinalizar.addActionListener(this::btnFinalizarActionPerformed);
 
