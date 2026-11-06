@@ -45,18 +45,10 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="49" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel2" min="-2" pref="37" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="lblPlayer4" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel1" min="-2" pref="37" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="lblPlayer2" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="lblPlayer4" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPlayer2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -86,7 +78,6 @@
                   <Component id="lblPlayer2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cbResultado1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cbResultado2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="27" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -94,7 +85,6 @@
                   <Component id="lblPlayer4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cbResultado3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cbResultado4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -229,16 +219,6 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="v/s"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="v/s"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>
